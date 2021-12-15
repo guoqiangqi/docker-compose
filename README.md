@@ -1,2 +1,1 @@
-# docker-compose
-Docker compose scripts
+# Shell scripts
