@@ -4,6 +4,7 @@ RUN git clone https://gitee.com/sunmao-dx/strategy-executor.git /strategy-execut
 FROM golang:alpine
 WORKDIR /app
 COPY --from=0 /strategy-executor ./
+RUN go env -w GOPROXY=http://goproxy.cn
 RUN go mod download
 COPY . .
 #CMD ["go", "run", "src/server.go"]
