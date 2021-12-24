@@ -8,8 +8,10 @@ spec:
   ports:
   - port: 9001
     targetPort: 8001
+    nodePort: 30001
     protocol: TCP
   # externalIPs: [""]
+  type: NodePort
 
   selector:
     app: event-retriever
