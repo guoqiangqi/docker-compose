@@ -5,6 +5,7 @@ FROM golang:alpine
 WORKDIR /app
 #COPY ./event-retriever/ ./
 COPY --from=0 /event-retriever ./
+RUN go env -w GOPROXY=http://goproxy.cn
 RUN go mod download
 RUN go build -o event_retriever src/server.go
 
