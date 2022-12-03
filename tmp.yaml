@@ -5,7 +5,7 @@
         template: train
     - - name: mnist-eval
         template: eval
-      - name: mnist-serving
+      - name: mnist-deploy
         template: server
-      - name: mnist-web
+      - name: mnist-serving
         template: create-service
