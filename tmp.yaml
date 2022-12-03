@@ -1,0 +1,11 @@
+
+  - name: mnist-job
+    tasks:
+    - - name: mnist-train
+        template: train
+    - - name: mnist-eval
+        template: eval
+      - name: mnist-serving
+        template: server
+      - name: mnist-web
+        template: create-service
